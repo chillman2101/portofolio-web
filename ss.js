@@ -1,0 +1,20 @@
+const { chromium } = require('playwright');
+const tmp = 'C:/Users/user/AppData/Local/Temp/';
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await page.goto('http://localhost:5174');
+  await page.waitForTimeout(1000);
+  await page.screenshot({ path: tmp + 's-hero.png' });
+  await page.evaluate(() => document.getElementById('about').scrollIntoView());
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: tmp + 's-about.png' });
+  await page.evaluate(() => document.getElementById('projects').scrollIntoView());
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: tmp + 's-projects.png' });
+  await page.evaluate(() => document.getElementById('skills').scrollIntoView());
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: tmp + 's-skills.png' });
+  await browser.close();
+})();
