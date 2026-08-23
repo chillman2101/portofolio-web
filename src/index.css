@@ -144,3 +144,42 @@ html {
     animation: none;
   }
 }
+
+/* 3-column layout */
+.retro-announcement-bar {
+  background-color: var(--retro-black);
+  color: var(--retro-yellow);
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  padding: 8px 0;
+  border-bottom: 3px solid var(--retro-yellow);
+}
+
+.retro-page-grid {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 800px) 200px;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  align-items: start;
+}
+
+.retro-sidebar {
+  position: sticky;
+  top: 24px;
+}
+
+.retro-center-col {
+  background-color: var(--retro-center-bg);
+  border: 3px solid var(--retro-black);
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .retro-page-grid {
+    grid-template-columns: minmax(0, 800px);
+  }
+  .retro-sidebar {
+    display: none;
+  }
+}
