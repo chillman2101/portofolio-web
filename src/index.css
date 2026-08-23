@@ -75,3 +75,30 @@ html {
 ::-webkit-scrollbar-track { background: var(--retro-center-bg); border-left: 3px solid var(--retro-black); }
 ::-webkit-scrollbar-thumb { background: var(--retro-purple); border: 2px solid var(--retro-black); }
 ::-webkit-scrollbar-thumb:hover { background: var(--retro-blue); }
+
+/* Marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-viewport {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-scroll linear infinite;
+}
+
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
