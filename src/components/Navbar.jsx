@@ -9,8 +9,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className="retro-center-bg"
-      style={{ borderBottom: "3px solid var(--retro-black)" }}
+      style={{
+        borderBottom: "3px solid var(--retro-black)",
+        backgroundColor: "var(--retro-center-bg)",
+      }}
     >
       <Container>
         <div className="flex items-center justify-between h-16">

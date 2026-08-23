@@ -16,8 +16,7 @@ const ScrollToTop = () => {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
-      className="fixed bottom-8 right-8 z-50 p-3 neo-btn"
-      style={{ backgroundColor: "var(--blue)", color: "var(--white)" }}
+      className="fixed bottom-8 right-8 z-50 p-3 retro-btn"
     >
       <ArrowUp size={18} />
     </button>

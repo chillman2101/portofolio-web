@@ -1,4 +1,5 @@
 import Marquee from "./Marquee";
+import Container from "./Layout";
 
 const stackCategories = [
   {
@@ -49,7 +50,7 @@ const getSkillLevel = (level) => {
 
 const TechStacks = () => (
   <section id="stack" style={{ backgroundColor: "var(--retro-center-bg)", padding: "64px 0" }}>
-    <div style={{ padding: "0 2rem" }}>
+    <Container>
       <div className="mb-10">
         <h2 className="retro-heading mb-3" style={{ fontSize: "clamp(1.1rem, 3vw, 1.6rem)", color: "var(--retro-black)" }}>
           Stacks &{" "}
@@ -120,7 +121,7 @@ const TechStacks = () => (
           </div>
         ))}
       </div>
-    </div>
+    </Container>
   </section>
 );
 

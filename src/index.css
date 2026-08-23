@@ -66,6 +66,15 @@ html {
   transform: translate(1px, 1px);
 }
 
+.retro-btn:hover {
+  filter: brightness(1.1);
+}
+
+.retro-btn:focus-visible {
+  outline: 3px solid var(--retro-blue);
+  outline-offset: 2px;
+}
+
 .retro-heading {
   font-family: var(--font-display);
   color: var(--retro-black);
@@ -85,6 +94,10 @@ html {
 .marquee-viewport {
   overflow: hidden;
   white-space: nowrap;
+}
+
+.marquee-item {
+  display: inline-block;
 }
 
 .marquee-track {
@@ -115,7 +128,7 @@ html {
 
 .retro-widget-title {
   font-family: var(--font-display);
-  font-size: 0.55rem;
+  font-size: 0.6rem;
   margin-bottom: 6px;
   color: var(--retro-purple);
 }

@@ -6,17 +6,21 @@ const useVisitorCount = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    const alreadyCounted = sessionStorage.getItem("portfolio_session_counted");
-    const stored = parseInt(localStorage.getItem(VISITOR_KEY), 10);
-    const current = Number.isFinite(stored) ? stored : 13042;
+    try {
+      const alreadyCounted = sessionStorage.getItem("portfolio_session_counted");
+      const stored = parseInt(localStorage.getItem(VISITOR_KEY), 10);
+      const current = Number.isFinite(stored) ? stored : 13042;
 
-    if (!alreadyCounted) {
-      const next = current + 1;
-      localStorage.setItem(VISITOR_KEY, String(next));
-      sessionStorage.setItem("portfolio_session_counted", "1");
-      setCount(next);
-    } else {
-      setCount(current);
+      if (!alreadyCounted) {
+        const next = current + 1;
+        localStorage.setItem(VISITOR_KEY, String(next));
+        sessionStorage.setItem("portfolio_session_counted", "1");
+        setCount(next);
+      } else {
+        setCount(current);
+      }
+    } catch {
+      // Storage access blocked (e.g. Safari Private Browsing) — leave count null.
     }
   }, []);
 
