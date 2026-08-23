@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("Message sent! I'll get back to you soon.");
+    setStatus("You know that its gimmic, right?");
     setTimeout(() => {
       setStatus("");
       setForm({ name: "", email: "", message: "" });
@@ -38,7 +38,7 @@ const Contact = () => {
       <Container>
         <div className="mb-12">
           <h2 className="retro-heading mb-3" style={{ fontSize: "clamp(1.1rem, 3vw, 1.6rem)", color: "var(--retro-black)" }}>
-            Get In{" "}
+            ~ Get In{" "}
             <span
               style={{
                 backgroundColor: "var(--retro-purple)",
@@ -49,7 +49,8 @@ const Contact = () => {
               }}
             >
               Touch
-            </span>
+            </span>{" "}
+            ~
           </h2>
           <p className="text-base" style={{ color: "var(--retro-black)", opacity: 0.65 }}>
             Open to collaborations, freelance work, or just a friendly chat.
