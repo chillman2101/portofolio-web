@@ -102,3 +102,45 @@ html {
     animation: none;
   }
 }
+
+/* Sidebar widgets */
+.retro-widget {
+  background-color: var(--retro-center-bg);
+  border: 2px solid var(--retro-black);
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.retro-widget-title {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  margin-bottom: 6px;
+  color: var(--retro-purple);
+}
+
+.retro-counter {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  background-color: var(--retro-black);
+  color: var(--retro-yellow);
+  padding: 4px 8px;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+@keyframes retro-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.retro-blink {
+  animation: retro-blink 1s step-start infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-blink {
+    animation: none;
+  }
+}
