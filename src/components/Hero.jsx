@@ -4,8 +4,7 @@ import Container from "./Layout";
 const Hero = () => (
   <section
     id="home"
-    className="bg-white"
-    style={{ paddingTop: "96px", paddingBottom: "80px", minHeight: "100vh", display: "flex", alignItems: "center" }}
+    style={{ paddingTop: "48px", paddingBottom: "80px", backgroundColor: "var(--retro-center-bg)" }}
   >
     <Container>
       <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -15,30 +14,29 @@ const Hero = () => (
           <div
             className="inline-flex items-center gap-2 text-sm font-bold w-fit px-4 py-2"
             style={{
-              backgroundColor: "var(--blue-light)",
-              color: "var(--dark)",
-              border: "2px solid var(--dark)",
+              backgroundColor: "var(--retro-yellow)",
+              color: "var(--retro-black)",
+              border: "2px solid var(--retro-black)",
             }}
           >
             <span
               className="w-2 h-2 rounded-full"
-              style={{ backgroundColor: "var(--blue)" }}
+              style={{ backgroundColor: "var(--retro-purple)" }}
             />
             Available for work
           </div>
 
           <h1
-            className="font-black leading-tight"
-            style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", color: "var(--dark)" }}
+            className="retro-heading leading-tight"
+            style={{ fontSize: "clamp(1.4rem, 4vw, 2rem)", color: "var(--retro-black)" }}
           >
             Hi, I'm{" "}
             <span
               style={{
-                backgroundColor: "var(--blue)",
-                color: "var(--white)",
+                backgroundColor: "var(--retro-purple)",
+                color: "#ffffff",
                 padding: "0 10px",
-                border: "3px solid var(--dark)",
-                boxShadow: "4px 4px 0 var(--dark)",
+                border: "3px solid var(--retro-black)",
                 display: "inline-block",
               }}
             >
@@ -50,7 +48,7 @@ const Hero = () => (
 
           <p
             className="text-base leading-relaxed"
-            style={{ color: "var(--dark)", opacity: 0.75, maxWidth: "480px" }}
+            style={{ color: "var(--retro-black)", opacity: 0.75, maxWidth: "480px" }}
           >
             Versatile backend engineer with 4+ years building scalable
             microservices, APIs, and mobile apps across Go, Java, PHP, Kotlin, and C#.
@@ -59,15 +57,14 @@ const Hero = () => (
           <div className="flex flex-wrap gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 font-bold px-6 py-3 neo-btn"
-              style={{ backgroundColor: "var(--blue)", color: "var(--white)" }}
+              className="inline-flex items-center gap-2 font-bold px-6 py-3 retro-btn"
             >
               Get In Touch <ArrowRight size={16} />
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 font-bold px-6 py-3 neo-btn bg-white"
-              style={{ color: "var(--dark)" }}
+              className="inline-flex items-center gap-2 font-bold px-6 py-3 retro-btn"
+              style={{ backgroundColor: "var(--retro-yellow)", color: "var(--retro-black)" }}
             >
               View Projects
             </a>
@@ -85,8 +82,7 @@ const Hero = () => (
                 target={s.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="p-3 neo-btn"
-                style={{ backgroundColor: "var(--dark)", color: "var(--white)" }}
+                className="p-3 retro-btn"
               >
                 {s.icon}
               </a>
@@ -100,17 +96,16 @@ const Hero = () => (
             <div
               className="flex flex-col items-center justify-center gap-3"
               style={{
-                width: "340px",
-                height: "380px",
-                backgroundColor: "var(--blue-light)",
-                border: "3px solid var(--dark)",
-                boxShadow: "8px 8px 0 var(--dark)",
+                width: "260px",
+                height: "300px",
+                backgroundColor: "var(--retro-yellow)",
+                border: "3px solid var(--retro-black)",
                 position: "relative",
                 zIndex: 1,
               }}
             >
-              <span style={{ fontSize: "5rem" }}>👨‍💻</span>
-              <p className="font-bold text-base" style={{ color: "var(--dark)" }}>
+              <span style={{ fontSize: "4rem" }}>👨‍💻</span>
+              <p className="font-bold text-base" style={{ color: "var(--retro-black)" }}>
                 Your Photo Here
               </p>
             </div>
@@ -120,10 +115,10 @@ const Hero = () => (
                 position: "absolute",
                 top: "12px",
                 left: "12px",
-                width: "340px",
-                height: "380px",
-                backgroundColor: "var(--blue)",
-                border: "3px solid var(--dark)",
+                width: "260px",
+                height: "300px",
+                backgroundColor: "var(--retro-purple)",
+                border: "3px solid var(--retro-black)",
                 zIndex: 0,
               }}
             />

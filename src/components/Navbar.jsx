@@ -9,19 +9,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-white"
-      style={{ borderBottom: "3px solid var(--dark)" }}
+      style={{
+        borderBottom: "3px solid var(--retro-black)",
+        backgroundColor: "var(--retro-center-bg)",
+      }}
     >
       <Container>
         <div className="flex items-center justify-between h-16">
           <a
             href="#home"
-            className="font-black text-base px-4 py-2"
+            className="retro-heading text-xs px-4 py-2"
             style={{
-              backgroundColor: "var(--blue)",
-              color: "var(--white)",
-              border: "3px solid var(--dark)",
-              boxShadow: "3px 3px 0 var(--dark)",
+              backgroundColor: "var(--retro-purple)",
+              color: "#ffffff",
+              border: "3px solid var(--retro-black)",
             }}
           >
             AGR.
@@ -32,10 +33,10 @@ const Navbar = () => {
               <a
                 key={l}
                 href={`#${l.toLowerCase()}`}
-                className="font-bold text-sm px-4 py-2 transition-all hover:bg-[var(--blue-light)]"
+                className="font-bold text-sm px-4 py-2 transition-all hover:bg-[var(--retro-yellow)]"
                 style={{
-                  color: "var(--dark)",
-                  border: "2px solid var(--dark)",
+                  color: "var(--retro-black)",
+                  border: "2px solid var(--retro-black)",
                 }}
               >
                 {l}
@@ -46,7 +47,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2"
-            style={{ border: "2px solid var(--dark)" }}
+            style={{ border: "2px solid var(--retro-black)" }}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -54,7 +55,7 @@ const Navbar = () => {
       </Container>
 
       {isOpen && (
-        <div style={{ borderTop: "2px solid var(--dark)" }}>
+        <div style={{ borderTop: "2px solid var(--retro-black)" }}>
           <Container>
             <div className="py-3 flex flex-col gap-2">
               {links.map((l) => (
@@ -64,8 +65,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className="font-bold text-sm px-4 py-3"
                   style={{
-                    color: "var(--dark)",
-                    border: "2px solid var(--dark)",
+                    color: "var(--retro-black)",
+                    border: "2px solid var(--retro-black)",
                   }}
                 >
                   {l}

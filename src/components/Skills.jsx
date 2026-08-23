@@ -32,25 +32,24 @@ const badges = [
 ];
 
 const Skills = () => (
-  <section id="skills" style={{ backgroundColor: "var(--blue-light)", padding: "80px 0" }}>
+  <section id="skills" style={{ backgroundColor: "var(--retro-yellow)", padding: "64px 0" }}>
     <Container>
       <div className="mb-12">
-        <h2 className="font-black mb-3" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "var(--dark)" }}>
+        <h2 className="retro-heading mb-3" style={{ fontSize: "clamp(1.1rem, 3vw, 1.6rem)", color: "var(--retro-black)" }}>
           Skills &{" "}
           <span
             style={{
-              backgroundColor: "var(--blue)",
-              color: "var(--white)",
+              backgroundColor: "var(--retro-purple)",
+              color: "#ffffff",
               padding: "0 10px",
-              border: "3px solid var(--dark)",
-              boxShadow: "4px 4px 0 var(--dark)",
+              border: "3px solid var(--retro-black)",
               display: "inline-block",
             }}
           >
             Expertise
           </span>
         </h2>
-        <p className="text-base" style={{ color: "var(--dark)", opacity: 0.65 }}>
+        <p className="text-base" style={{ color: "var(--retro-black)", opacity: 0.65 }}>
           Technologies and tools I use to build scalable backend systems.
         </p>
       </div>
@@ -60,41 +59,40 @@ const Skills = () => (
           <div
             key={i}
             style={{
-              backgroundColor: "var(--white)",
-              border: "3px solid var(--dark)",
-              boxShadow: "6px 6px 0 var(--dark)",
+              backgroundColor: "var(--retro-center-bg)",
+              border: "3px solid var(--retro-black)",
             }}
           >
             <div
               className="px-6 py-4"
               style={{
-                backgroundColor: "var(--blue)",
-                borderBottom: "3px solid var(--dark)",
+                backgroundColor: "var(--retro-purple)",
+                borderBottom: "3px solid var(--retro-black)",
               }}
             >
-              <h3 className="font-black text-lg" style={{ color: "var(--white)" }}>{cat.category}</h3>
+              <h3 className="font-black text-lg" style={{ color: "#ffffff" }}>{cat.category}</h3>
             </div>
 
             <div className="p-6 flex flex-col gap-5">
               {cat.skills.map((skill, j) => (
                 <div key={j}>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="font-bold text-sm" style={{ color: "var(--dark)" }}>{skill.name}</span>
-                    <span className="font-bold text-xs" style={{ color: "var(--blue)" }}>{skill.level}%</span>
+                    <span className="font-bold text-sm" style={{ color: "var(--retro-black)" }}>{skill.name}</span>
+                    <span className="font-bold text-xs" style={{ color: "var(--retro-purple)" }}>{skill.level}%</span>
                   </div>
                   <div
                     className="w-full h-4 relative"
                     style={{
-                      backgroundColor: "var(--blue-light)",
-                      border: "2px solid var(--dark)",
+                      backgroundColor: "var(--retro-yellow)",
+                      border: "2px solid var(--retro-black)",
                     }}
                   >
                     <div
                       style={{
                         width: `${skill.level}%`,
                         height: "100%",
-                        backgroundColor: "var(--blue)",
-                        borderRight: skill.level < 100 ? "2px solid var(--dark)" : "none",
+                        backgroundColor: "var(--retro-purple)",
+                        borderRight: skill.level < 100 ? "2px solid var(--retro-black)" : "none",
                         transition: "width 0.5s ease",
                       }}
                     />
@@ -112,14 +110,13 @@ const Skills = () => (
             key={i}
             className="text-center p-6"
             style={{
-              backgroundColor: "var(--white)",
-              border: "3px solid var(--dark)",
-              boxShadow: "4px 4px 0 var(--dark)",
+              backgroundColor: "var(--retro-center-bg)",
+              border: "3px solid var(--retro-black)",
             }}
           >
             <div style={{ fontSize: "2.5rem" }} className="mb-3">{b.emoji}</div>
-            <h4 className="font-black text-sm mb-1" style={{ color: "var(--dark)" }}>{b.title}</h4>
-            <p className="text-xs" style={{ color: "var(--dark)", opacity: 0.65 }}>{b.desc}</p>
+            <h4 className="font-black text-sm mb-1" style={{ color: "var(--retro-black)" }}>{b.title}</h4>
+            <p className="text-xs" style={{ color: "var(--retro-black)", opacity: 0.65 }}>{b.desc}</p>
           </div>
         ))}
       </div>

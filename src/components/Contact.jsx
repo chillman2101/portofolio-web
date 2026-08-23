@@ -26,50 +26,44 @@ const Contact = () => {
   const inputStyle = {
     width: "100%",
     padding: "10px 14px",
-    border: "2px solid var(--dark)",
+    border: "2px solid var(--retro-black)",
     outline: "none",
     fontSize: "0.875rem",
-    color: "var(--dark)",
-    backgroundColor: "var(--white)",
+    color: "var(--retro-black)",
+    backgroundColor: "var(--retro-center-bg)",
   };
 
   return (
-    <section id="contact" style={{ backgroundColor: "var(--white)", padding: "80px 0" }}>
+    <section id="contact" style={{ backgroundColor: "var(--retro-center-bg)", padding: "64px 0" }}>
       <Container>
         <div className="mb-12">
-          <h2 className="font-black mb-3" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "var(--dark)" }}>
+          <h2 className="retro-heading mb-3" style={{ fontSize: "clamp(1.1rem, 3vw, 1.6rem)", color: "var(--retro-black)" }}>
             Get In{" "}
             <span
               style={{
-                backgroundColor: "var(--blue)",
-                color: "var(--white)",
+                backgroundColor: "var(--retro-purple)",
+                color: "#ffffff",
                 padding: "0 10px",
-                border: "3px solid var(--dark)",
-                boxShadow: "4px 4px 0 var(--dark)",
+                border: "3px solid var(--retro-black)",
                 display: "inline-block",
               }}
             >
               Touch
             </span>
           </h2>
-          <p className="text-base" style={{ color: "var(--dark)", opacity: 0.65 }}>
+          <p className="text-base" style={{ color: "var(--retro-black)", opacity: 0.65 }}>
             Open to collaborations, freelance work, or just a friendly chat.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10">
-          {/* Left — Info */}
           <div className="flex flex-col gap-5">
             <div
               className="p-7"
-              style={{
-                backgroundColor: "var(--white)",
-                border: "3px solid var(--dark)",
-                boxShadow: "6px 6px 0 var(--dark)",
-              }}
+              style={{ backgroundColor: "var(--retro-center-bg)", border: "3px solid var(--retro-black)" }}
             >
-              <h3 className="font-black text-lg mb-4" style={{ color: "var(--dark)" }}>Let's Connect</h3>
-              <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--dark)", opacity: 0.7 }}>
+              <h3 className="font-black text-lg mb-4" style={{ color: "var(--retro-black)" }}>Let's Connect</h3>
+              <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--retro-black)", opacity: 0.7 }}>
                 Feel free to reach out for collaborations, opportunities, or just to say hi.
               </p>
               <div className="flex flex-col gap-3">
@@ -79,12 +73,12 @@ const Contact = () => {
                     href={item.href}
                     className="flex items-center gap-3 p-3 transition-colors"
                     style={{
-                      border: "2px solid var(--dark)",
-                      color: "var(--dark)",
-                      backgroundColor: "var(--blue-light)",
+                      border: "2px solid var(--retro-black)",
+                      color: "var(--retro-black)",
+                      backgroundColor: "var(--retro-yellow)",
                     }}
                   >
-                    <span style={{ color: "var(--blue)" }}>{item.icon}</span>
+                    <span style={{ color: "var(--retro-purple)" }}>{item.icon}</span>
                     <div>
                       <div className="text-xs font-bold" style={{ opacity: 0.55 }}>{item.label}</div>
                       <div className="text-sm font-semibold">{item.value}</div>
@@ -96,20 +90,15 @@ const Contact = () => {
 
             <div
               className="p-6"
-              style={{
-                backgroundColor: "var(--blue-light)",
-                border: "3px solid var(--dark)",
-                boxShadow: "4px 4px 0 var(--dark)",
-              }}
+              style={{ backgroundColor: "var(--retro-yellow)", border: "3px solid var(--retro-black)" }}
             >
-              <h4 className="font-black mb-4" style={{ color: "var(--dark)" }}>Find Me On</h4>
+              <h4 className="font-black mb-4" style={{ color: "var(--retro-black)" }}>Find Me On</h4>
               <div className="flex gap-3">
                 <a
                   href="https://github.com/chillman2101"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold neo-btn"
-                  style={{ backgroundColor: "var(--dark)", color: "var(--white)" }}
+                  className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold retro-btn"
                 >
                   <GithubIcon size={15} /> GitHub
                 </a>
@@ -117,8 +106,8 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/adit-gustiana-r-8293a91b6/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold neo-btn"
-                  style={{ backgroundColor: "var(--blue)", color: "var(--white)" }}
+                  className="flex-1 flex items-center justify-center gap-2 py-3 text-sm font-bold retro-btn"
+                  style={{ backgroundColor: "var(--retro-purple)", color: "#ffffff" }}
                 >
                   <LinkedinIcon size={15} /> LinkedIn
                 </a>
@@ -126,40 +115,34 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right — Form */}
           <div
             className="p-7"
-            style={{
-              backgroundColor: "var(--white)",
-              border: "3px solid var(--dark)",
-              boxShadow: "6px 6px 0 var(--dark)",
-            }}
+            style={{ backgroundColor: "var(--retro-center-bg)", border: "3px solid var(--retro-black)" }}
           >
-            <h3 className="font-black text-lg mb-6" style={{ color: "var(--dark)" }}>Send a Message</h3>
+            <h3 className="font-black text-lg mb-6" style={{ color: "var(--retro-black)" }}>Send a Message</h3>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div>
-                <label className="block text-sm font-bold mb-1" style={{ color: "var(--dark)" }}>Name</label>
+                <label className="block text-sm font-bold mb-1" style={{ color: "var(--retro-black)" }}>Name</label>
                 <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="John Doe" style={inputStyle} />
               </div>
               <div>
-                <label className="block text-sm font-bold mb-1" style={{ color: "var(--dark)" }}>Email</label>
+                <label className="block text-sm font-bold mb-1" style={{ color: "var(--retro-black)" }}>Email</label>
                 <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="john@example.com" style={inputStyle} />
               </div>
               <div>
-                <label className="block text-sm font-bold mb-1" style={{ color: "var(--dark)" }}>Message</label>
+                <label className="block text-sm font-bold mb-1" style={{ color: "var(--retro-black)" }}>Message</label>
                 <textarea name="message" value={form.message} onChange={handleChange} required rows="5" placeholder="Tell me about your project..." style={{ ...inputStyle, resize: "none" }} />
               </div>
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 py-3 font-bold neo-btn"
-                style={{ backgroundColor: "var(--blue)", color: "var(--white)" }}
+                className="flex items-center justify-center gap-2 py-3 font-bold retro-btn"
               >
                 <Send size={16} /> Send Message
               </button>
               {status && (
                 <div
                   className="p-3 text-center text-sm font-bold"
-                  style={{ backgroundColor: "var(--blue-light)", border: "2px solid var(--dark)", color: "var(--dark)" }}
+                  style={{ backgroundColor: "var(--retro-yellow)", border: "2px solid var(--retro-black)", color: "var(--retro-black)" }}
                 >
                   {status}
                 </div>
